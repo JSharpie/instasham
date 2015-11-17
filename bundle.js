@@ -30,12 +30,17 @@ var ItemCollection = require('./itemCollection');
 var ItemModel = require('./itemModel');
 var page = {
   init: function(){
+    setTimeout(function(){
     setInterval(function(){
       page.stylesInit();
     },1000);
+  }, 3500);
     page.eventsInit();
   },
   stylesInit: function(){
+    $('.picContainer').removeClass('hidden');
+    $('.imagePost').removeClass('hidden');
+    $('.shamwow').addClass('hidden');
     var itemCollection = new ItemCollection();
     itemCollection.fetch().then(function(data){
       $('.picContainer').html('');
@@ -108,7 +113,7 @@ var page = {
   },
 };
 $(document).ready(function(){
-  page.init();
+    page.init();
 });
 
 },{"./itemCollection":1,"./itemModel":2,"jquery":5,"underscore":6}],4:[function(require,module,exports){
