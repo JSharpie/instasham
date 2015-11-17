@@ -5,9 +5,9 @@ var ItemModel = require('./itemModel');
 
 var page = {
   init: function(){
-    //setInterval(function(){
+    setInterval(function(){
       page.stylesInit();
-    //},500);
+    },500);
     page.eventsInit();
   },
   stylesInit: function(){
