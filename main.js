@@ -41,6 +41,8 @@ var page = {
         caption: $('input[name="caption"]').val(),
       });
       item.save();
+      $('input[name="picUrl"]').val('');
+      $('input[name="caption"]').val('');
     });
     $('.picContainer').on('click', '.upvote', function(e){
       var id = $(this).data('id');
