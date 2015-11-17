@@ -5,10 +5,8 @@ var ItemModel = require('./itemModel');
 var page = {
   init: function(){
     setTimeout(function(){
-    setInterval(function(){
       page.stylesInit();
-    },1000);
-  }, 3500);
+    }, 3500);
     page.eventsInit();
   },
   stylesInit: function(){
@@ -48,6 +46,9 @@ var page = {
       item.save();
       $('input[name="picUrl"]').val('');
       $('input[name="caption"]').val('');
+      setTimeout(function(){
+        page.stylesInit();
+      }, 500);
     });
     $('.picContainer').on('click', '.upvote', function(e){
       var id = $(this).data('id');
@@ -63,6 +64,9 @@ var page = {
           }
         });
       });
+      setTimeout(function(){
+        page.stylesInit();
+      }, 500);
     });
     $('.picContainer').on('click', '.downvote', function(e){
       var id = $(this).data('id');
@@ -78,6 +82,9 @@ var page = {
           }
         });
       });
+      setTimeout(function(){
+        page.stylesInit();
+      }, 500);
     });
     $('.deletebug').on('click', function(e){
       window.itemCollection = new ItemCollection();
