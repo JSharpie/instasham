@@ -28,12 +28,12 @@ var $ = require('jquery');
 var _ = require('underscore');
 var ItemCollection = require('./itemCollection');
 var ItemModel = require('./itemModel');
-
+var pictureTemp = _.template($('#pictureTemplate').html());
 var page = {
   init: function(){
-    //setInterval(function(){
+    setInterval(function(){
       page.stylesInit();
-    //},500);
+    },1000);
     page.eventsInit();
   },
   stylesInit: function(){
