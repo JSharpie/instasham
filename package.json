@@ -1,0 +1,29 @@
+{
+  "name": "instasham",
+  "version": "1.0.0",
+  "description": "pictures of shammies",
+  "main": "main.js",
+  "keywords": [
+    "shammy"
+  ],
+  "author": "Jacob Sharp",
+  "license": "MIT",
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "bundle": "./node_modules/.bin/browserify main.js -o bundle.js",
+    "watch": "./node_modules/.bin/watchify main.js -o bundle.js & ./node_modules/.bin/node-sass styles.scss compile.css -w",
+    "serve": "./node_modules/.bin/serve",
+    "sass": "./node_modules/.bin/node-sass styles.scss styles.css",
+    "start": "npm run watch & npm run serve"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "node-sass": "^3.4.2",
+    "serve": "^1.4.0",
+    "watchify": "^3.6.1"
+  }
+}

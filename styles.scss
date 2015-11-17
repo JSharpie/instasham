@@ -1,0 +1,32 @@
+.upvote, .downvote{
+  display:inline-block;
+  vertical-align: top;
+}
+img{
+  height:250px;
+  width:250px;
+}
+.picContainer{
+  display:block;
+  width:80%;
+  margin: 0 auto;
+  .postCont{
+    width:45%;
+    padding: 20px 20px;
+    display:inline-block;
+    text-align:center;
+  }
+}
+.imagePost{
+  width:80%;
+  margin: 0 auto;
+  input{
+    width:100%;
+    margin: 0 auto;
+  }
+  button{
+    width:10%;
+    display:block;
+    margin: 0 auto;
+  }
+}
