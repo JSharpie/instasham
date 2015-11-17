@@ -6,7 +6,7 @@ var page = {
   init: function(){
     setTimeout(function(){
       page.stylesInit();
-    }, 3500);
+    }, 4900);
     page.eventsInit();
   },
   stylesInit: function(){
